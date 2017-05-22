@@ -3,25 +3,60 @@
     <div ng-class="logo">
       <img src="img/logo.png" class="block">
     </div>
-    <h3 id="meusClientes-heading5" style="color:#000000;">Meus clientes</h3>
+    <h3 id="meusClientes-heading5">Meus clientes</h3>
     <form id="meusClientes-form2" class="list">
-      <ion-item class="item-icon-right" id="meusClientes-list-item2">Pesquisar
+      <label class="item item-input item-icon-right item-stacked-label pesquisa" id="novoCliente-input2">
+        <input type="text" placeholder="Pesquisar">
         <i class="icon ion-android-search"></i>
-      </ion-item>
-      <div class="spacer" style="width: 300px; height: 15px;"></div>
-      <ion-item class="item-avatar" id="meusClientes-list-item3" ui-sref="tabsController.detalheCliente()">
-        <h2>Nome do Cliente</h2>
-        <p>Idade do cliente</p>
-      </ion-item>
-      <ion-item class="item-avatar" id="meusClientes-list-item7" ui-sref="tabsController.detalheCliente()">
-        <h2>Nome do Cliente</h2>
-        <p>Idade do cliente</p>
-      </ion-item>
-      <ion-item class="item-avatar" id="meusClientes-list-item8" ui-sref="tabsController.detalheCliente()">
-        <h2>Nome do Cliente</h2>
-        <p>Idade do cliente</p>
-      </ion-item>
+      </label>
+      <div class="box-clientes">
+        <ion-item class="cliente pink" id="meusClientes-list-item3" ui-sref="tabsController.detalheCliente()">
+          <div class="row">
+            <div class="col col-25">
+              <div class="cliente-avatar"><img src=""></div>
+            </div>
+            <div class="col col-75">
+              <h2 class="pink">Nome do Cliente</h2>
+              <p>Idade do cliente</p>
+            </div>
+          </div>
+        </ion-item>
+        <ion-item class="cliente blue" id="meusClientes-list-item7" ui-sref="tabsController.detalheCliente()">
+          <div class="row">
+            <div class="col col-25">
+              <div class="cliente-avatar"><img src=""></div>
+            </div>
+            <div class="col col-75">
+              <h2 class="blue">Nome do Cliente</h2>
+              <p>Idade do cliente</p>
+            </div>
+          </div>
+        </ion-item>
+        <ion-item class="cliente pink" id="meusClientes-list-item3" ui-sref="tabsController.detalheCliente()">
+          <div class="row">
+            <div class="col col-25">
+              <div class="cliente-avatar"><img src=""></div>
+            </div>
+            <div class="col col-75">
+              <h2 class="pink">Nome do Cliente</h2>
+              <p>Idade do cliente</p>
+            </div>
+          </div>
+        </ion-item>
+        <ion-item class="cliente blue" id="meusClientes-list-item7" ui-sref="tabsController.detalheCliente()">
+          <div class="row">
+            <div class="col col-25">
+              <div class="cliente-avatar"><img src=""></div>
+            </div>
+            <div class="col col-75">
+              <h2 class="blue">Nome do Cliente</h2>
+              <p>Idade do cliente</p>
+            </div>
+          </div>
+        </ion-item>
+      </div>
     </form>
-    <a ui-sref="tabsController.novoCliente()" id="meusClientes-button13" style="border-radius:0px 0px 0px 0px;" class="button button-positive button-block button-outline icon ion-android-person-add"> Tenho um novo cliente</a>
+    <div class="divisor"></div>
+    <a ui-sref="tabsController.novoCliente()" id="home-button13" class="button button-positive button-block button-outline icon icon-add botao cliente-botao"> Tenho um novo cliente</a>
   </ion-content>
 </ion-view>
