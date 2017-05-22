@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/* 
+---- CORES ----
+grey: #596573;
+pink: #c83bb3;
+blue: #338ef0;
+
+*/
+
+
+/* CSS do projeto */
+
+h1, h2, h3, h4, h5 {
+	color: #596573;
+	border-bottom: 1px solid #596573;
+}
+
+.blue {
+	color: #338ef0 !important;
+}
+
+.pink {
+	color: #c83bb3 !important;
+}
+
+p {
+	color: #596573;
+}
+
+.center {
+	text-align: center;
+}
+
+.espaco-top {
+	margin-top: 120px;
+}
+
+.block {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* LOGO */
+
+.logo {
+	margin: 10px;
+}
+
+/* ELEMENTOS COMUNS */
+
+.botao {
+	border-radius: 0;
+	border: 1px solid #338ef0 !important;
+	color: #c83bb3 !important;
+	transition: all 0.5s ease;
+}
+
+.botao.activated {
+	background: #338ef0;
+	border: 1px solid #c83bb3 !important;
+	color: #fff !important;
+}
+
+/* ICONES */
+
+.icon-list:before {
+    background-image: url(/../../../img/list.png);
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: relative;
+    top: 7px;
+}
+
+.icon-add:before {
+	background-image: url(/../../../img/add.png);
+    background-size: 30px 25px;
+    width: 30px;
+    height: 25px;
+    content: "";
+    position: relative;
+    top: 6px;
+}
