@@ -1,4 +1,13 @@
 {
   "name": "clientes_izie",
-  "app_id": "9f5a17d4"
+  "app_id": "9f5a17d4",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
 }
