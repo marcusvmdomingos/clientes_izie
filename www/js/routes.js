@@ -93,9 +93,9 @@ angular.module('app.routes', ['ionicUIRouter'])
     The IonicUIRouter.js UI-Router Modification is being used for this route.
     To navigate to this route, do NOT use a URL. Instead use one of the following:
       1) Using the ui-sref HTML attribute:
-        ui-sref='tabsController.confirmaO'
+        ui-sref='tabsController.confirmacao'
       2) Using $state.go programatically:
-        $state.go('tabsController.confirmaO');
+        $state.go('tabsController.confirmacao');
     This allows your app to figure out which Tab to open this page in on the fly.
     If you're setting a Tabs default page or modifying the .otherwise for your app and
     must use a URL, use one of the following:
@@ -103,20 +103,20 @@ angular.module('app.routes', ['ionicUIRouter'])
       /page1/tab1/confirmacao
       /page1/tab2/confirmacao
   */
-  .state('tabsController.confirmaO', {
+  .state('tabsController.confirmacao', {
     url: '/confirmacao',
     views: {
       'tab3': {
-        templateUrl: 'templates/confirmaO.html',
-        controller: 'confirmaOCtrl'
+        templateUrl: 'templates/confirmacao.html',
+        controller: 'confirmacaoCtrl'
       },
       'tab1': {
-        templateUrl: 'templates/confirmaO.html',
-        controller: 'confirmaOCtrl'
+        templateUrl: 'templates/confirmacao.html',
+        controller: 'confirmacaoCtrl'
       },
       'tab2': {
-        templateUrl: 'templates/confirmaO.html',
-        controller: 'confirmaOCtrl'
+        templateUrl: 'templates/confirmacao.html',
+        controller: 'confirmacaoCtrl'
       }
     }
   })

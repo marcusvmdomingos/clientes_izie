@@ -1,25 +1,39 @@
 <ion-view title="Novo cliente" hide-nav-bar="true" id="page4">
-  <ion-content padding="true" class="manual-ios-statusbar-padding">
+  <ion-content padding="true" class="manual-ios-statusbar-padding" >
     <div ng-class="logo">
       <img src="img/logo.png" class="block">
     </div>
-    <h3 id="novoCliente-heading1" style="color:#000000;">Novo Cliente</h3>
-    <form id="novoCliente-form1" class="list">
-      <ion-radio id="novoCliente-radio2" name="genero">Masculino</ion-radio>
-      <ion-radio id="novoCliente-radio3" name="genero">Feminino</ion-radio>
-      <div class="spacer" style="width: 300px; height: 17px;"></div>
-      <label class="item item-input item-stacked-label" id="novoCliente-input2">
+    <h3 id="novoCliente-heading1">Novo Cliente</h3>
+    <form id="novoCliente-form1" class="list novo-cliente">
+      <div class="row">
+        <div class="col col-50 esq">
+          <ion-radio class="male" id="novoCliente-radio2" name="genero">Cavalheiro</ion-radio>
+        </div>
+        <div class="col col-50 dir">
+          <ion-radio class="female" id="novoCliente-radio3" name="genero">Dama</ion-radio>
+        </div>
+      </div>
+      <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input2">
         <span class="input-label">Nome</span>
-        <input type="text" placeholder="">
+        <input type="text" placeholder="Nome do cliente">
       </label>
-      <label class="item item-input item-stacked-label" id="novoCliente-input3">
+      <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input3">
         <span class="input-label">Data de nascimento</span>
-        <input type="datetime-local"> 
+        <input type="date" format="dd/MM/yyyy" placeholder="Data de nascimento">
       </label>
-      <h4 id="novoCliente-heading2" style="color:#000000;">Foto</h4>
+      <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input4">
+        <span class="input-label">Foto</span>
+        <input type="file" >
+      </label>
       <button id="novoCliente-button6" class="button button-positive button-small button-block icon ion-paperclip"> Anexar</button>
-      <a ui-sref="tabsController.confirmaO()" id="novoCliente-button7" class="button button-positive button-small button-block icon ion-checkmark-round"> Salvar</a>
+      <!-- <div class="button-bar"> <a class="button" ng-click="takePicture();">Take photo</a> <a class="button" ng-click="selectPicture()">Choice photo</a> <a class="button" ng-click="viewPictures();">View loaded</a> </div>
+      <div ng-show="picData" class="item item-image">When pics loaded click to upload!<img id="myImage" class="item" ng-src="{{picData}}" ng-click="uploadPicture()" style="height:200px;"/></div>
+      <div class="home-sq" ng-show=photos><p><i class="icon ion-alert-circled" style="color:#F60"></i> Click to set photo like avatar, or lon click to delete!<p>
+        <div ng-repeat="photo in photos track by $index" ng-click="setPhoto($index, photo.name, profilo.user_id)" on-hold="delPhoto($index, photo.name)" style="background-image:url({{photo.file}});background-size:120% auto"> </div>
+      </div> -->
+      <a ui-sref="tabsController.confirmacao()" id="novoCliente-button7" class="button button-positive button-small button-block icon ion-checkmark-round"> Salvar</a>
       <a ui-sref="tabsController.meusClientes()" id="novoCliente-button8" class="button button-positive button-small button-block button-outline icon ion-close-round"> Cancelar</a>
     </form>
+
   </ion-content>
 </ion-view>
