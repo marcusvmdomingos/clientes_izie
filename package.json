@@ -1,7 +1,7 @@
 {
   "name": "clientes_izie",
-  "version": "1.1.1",
-  "description": "clientes_izie: An Ionic project",
+  "version": "1.2.1",
+  "description": "clientes_izie: App ",
   "dependencies": {
     "@ionic/cloud": "^0.16.0",
     "gulp": "^3.5.6",
