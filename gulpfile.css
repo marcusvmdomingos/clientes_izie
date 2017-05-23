@@ -1,0 +1,59 @@
+/*
+Error: Invalid CSS after "": expected expression (e.g. 1px, bold), was "['./scss/**\/*.s..."
+        on line 11 of gulpfile.js
+
+6: var minifyCss = require('gulp-minify-css');
+7: var rename = require('gulp-rename');
+8: var sh = require('shelljs');
+9: 
+10: var paths = {
+11:   sass: ['./scss/**\/*.scss']
+12: };
+13: 
+14: gulp.task('default', ['sass']);
+15: 
+16: gulp.task('sass', function(done) {
+
+Backtrace:
+gulpfile.js:11
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/script/lexer.rb:229:in `expected!'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/script/parser.rb:704:in `assert_expr'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/script/parser.rb:75:in `parse'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/script/parser.rb:240:in `parse'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/script.rb:27:in `parse'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:1151:in `parse_script'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:721:in `parse_property'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:692:in `parse_property_or_rule'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:658:in `parse_line'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:536:in `build_tree'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:555:in `block in append_children'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:554:in `each'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:554:in `append_children'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:545:in `block in build_tree'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:538:in `each'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:538:in `build_tree'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:555:in `block in append_children'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:554:in `each'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:554:in `append_children'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:409:in `_to_tree'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/usr/share/gems/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"\": expected expression (e.g. 1px, bold), was \"['./scss/**/*.s...\"\A         on line 11 of gulpfile.js\A \A 6: var minifyCss = require('gulp-minify-css');\A 7: var rename = require('gulp-rename');\A 8: var sh = require('shelljs');\A 9: \A 10: var paths = {\A 11:   sass: ['./scss/**/*.scss']\A 12: };\A 13: \A 14: gulp.task('default', ['sass']);\A 15: \A 16: gulp.task('sass', function(done) {"; }

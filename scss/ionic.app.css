@@ -1,0 +1,54 @@
+/*
+Error: Invalid CSS after "	filter: progid": expected ";", was ": DXImageTransf..."
+        on line 163 of scss/ionic.app.scss
+
+158: 	top: -15px;
+159: 	height: 30px;
+160: 	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
+161: 	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);
+162: 	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);
+163: 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+164: 	margin-bottom: -15px;
+165: 	z-index: 999;
+166: }
+167: 
+168: .cliente-botao {
+
+Backtrace:
+scss/ionic.app.scss:163
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:777:in `block in try_declaration'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:1165:in `rethrow'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:782:in `try_declaration'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:711:in `declaration_or_ruleset'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/usr/share/gems/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/usr/share/gems/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"	filter: progid\": expected \";\", was \": DXImageTransf...\"\A         on line 163 of scss/ionic.app.scss\A \A 158: 	top: -15px;\A 159: 	height: 30px;\A 160: 	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);\A 161: 	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);\A 162: 	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);\A 163: 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );\A 164: 	margin-bottom: -15px;\A 165: 	z-index: 999;\A 166: }\A 167: \A 168: .cliente-botao {"; }
