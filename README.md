@@ -4,7 +4,7 @@ Aplicativo teste para entrar na Izie. Vamos nessa!
 
 ## Comentários ##
 
-Gostei muito de fazer esse aplicativo, desde a parte da concepção visual até o frontend/backend final. Não consegui concluir o projeto por vários motivos, mas gostei do resultado. Não consegui integrar com a API (expliquei melhor no README da API), não consegui fazer uma funcionalidade aceitável para carregamento de fotos e esqueci de colocar meio de editar e excluir clientes e endereços (só me dei conta já na última versão, mas não dava mais tempo), mas acho que valei para a mostrar parte do meu trabalho.
+Gostei muito de fazer esse aplicativo, desde a parte da concepção visual até o frontend/backend final. Não consegui concluir o projeto por vários motivos, mas gostei do resultado. Não consegui integrar com a API (expliquei melhor no README da API), não consegui fazer uma funcionalidade aceitável para carregamento de fotos e esqueci de colocar meio de editar e excluir clientes e endereços (só me dei conta já na última versão, mas não dava mais tempo), mas acho que valeu para mostrar parte do meu trabalho.
 
 ## Meu Processo de Build ##
 
