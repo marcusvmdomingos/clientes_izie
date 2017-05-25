@@ -43,3 +43,5 @@ Todas as telas do requisito, com os campos Nome, Data de Nascimento e Foto do Cl
 
 v1.2.1 (branch versao-2)
 Nessa versão foram acrescentados os campos de E-mail e CPF no cadastro do Cliente. Todas as informações dessa versão são estáticas, ainda não apresenta API.
+
+v1.3.1 (branch versao-3)
