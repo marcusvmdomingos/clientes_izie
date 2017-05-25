@@ -10,47 +10,14 @@
         <i class="icon ion-android-search"></i>
       </label>
       <div class="box-clientes">
-        <ion-item class="cliente pink" id="meusClientes-list-item3" ui-sref="tabsController.detalheCliente()">
+        <ion-item ng-repeat="customer in customers" class="cliente pink" id="meusClientes-list-item3" ui-sref="tabsController.detalheCliente()">
           <div class="row">
             <div class="col col-25">
-              <div class="cliente-avatar"><img src=""></div>
+              <div class="cliente-avatar"><!-- <img src=""> --></div>
             </div>
             <div class="col col-75">
-              <h2 class="pink">Nome do Cliente</h2>
-              <p>E-mail Cliente</p>
-            </div>
-          </div>
-        </ion-item>
-        <ion-item class="cliente blue" id="meusClientes-list-item7" ui-sref="tabsController.detalheCliente()">
-          <div class="row">
-            <div class="col col-25">
-              <div class="cliente-avatar"><img src=""></div>
-            </div>
-            <div class="col col-75">
-              <h2 class="blue">Nome do Cliente</h2>
-              <p>E-mail Cliente</p>
-            </div>
-          </div>
-        </ion-item>
-        <ion-item class="cliente pink" id="meusClientes-list-item3" ui-sref="tabsController.detalheCliente()">
-          <div class="row">
-            <div class="col col-25">
-              <div class="cliente-avatar"><img src=""></div>
-            </div>
-            <div class="col col-75">
-              <h2 class="pink">Nome do Cliente</h2>
-              <p>E-mail Cliente</p>
-            </div>
-          </div>
-        </ion-item>
-        <ion-item class="cliente blue" id="meusClientes-list-item7" ui-sref="tabsController.detalheCliente()">
-          <div class="row">
-            <div class="col col-25">
-              <div class="cliente-avatar"><img src=""></div>
-            </div>
-            <div class="col col-75">
-              <h2 class="blue">Nome do Cliente</h2>
-              <p>E-mail Cliente</p>
+              <h2 ng-class="{pink: 'customer.genre = f', blue: 'customer.genre = m'">{{customer.name}}</h2>
+              <p>{customer.cpf}</p>
             </div>
           </div>
         </ion-item>

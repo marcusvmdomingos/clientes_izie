@@ -7,44 +7,47 @@
     <form id="novoCliente-form1" class="list novo-cliente">
       <div class="row">
         <div class="col col-50 esq">
-          <ion-radio class="male" id="novoCliente-radio2" name="genero">Cavalheiro</ion-radio>
+          <ion-radio class="male" id="novoCliente-radio2" name="gender" ng-model="customer.gender" value="m">Cavalheiro</ion-radio>
         </div>
         <div class="col col-50 dir">
-          <ion-radio class="female" id="novoCliente-radio3" name="genero">Dama</ion-radio>
+          <ion-radio class="female" id="novoCliente-radio3" name="gender" ng-model="customer.gender" value="f">Dama</ion-radio>
         </div>
       </div>
       <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input2">
         <span class="input-label">Nome</span>
-        <input type="text" placeholder="Nome do cliente">
-      </label>
-      <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input5">
-        <span class="input-label">E-mail</span>
-        <input type="email" placeholder="E-mail do cliente">
+        <input type="text" placeholder="Nome do cliente" ng-model="customer.nome">
       </label>
       <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input3">
         <span class="input-label">Data de nascimento</span>
-        <input type="date" format="dd/MM/yyyy" placeholder="Data de nascimento">
+        <input type="date" format="dd/MM/yyyy" placeholder="Data de nascimento" ng-model="customer.nasc">
       </label>
-      <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input6">
+      <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input6" >
         <span class="input-label">CPF</span>
-        <input type="number" placeholder="CPF do cliente">
+        <input type="number" placeholder="CPF do cliente" ng-model="customer.cpf">
       </label>
       <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input4">
         <span class="input-label">Foto</span>
-        <input type="file" >
+        <input type="file" ng-model="customer.foto">
       </label>
+      <div class="item item-input item-stacked-label campo-blue" id="novoCliente-input5">
+        <span class="input-label">Endereço(s)</span>
+        <a ng-click="modal.show()" id="novoCliente-button7" class="button button-positive button-small button-block icon ion-plus-round botao-blue right enderecos"></a>
+
+        <p ng-if="addresses.leight==0" class="block center">Nenhum endereço cadastrado.</p>
+
+        <label class="item item-input block" ng-repeat="address in addresses">{{address.name}}</label>
+
+      </div>
       <!-- <button id="novoCliente-button6" class="button button-positive button-small button-block icon ion-paperclip botao-blue"> Anexar</button> -->
       <!-- <div class="button-bar"> <a class="button" ng-click="takePicture();">Take photo</a> <a class="button" ng-click="selectPicture()">Choice photo</a> <a class="button" ng-click="viewPictures();">View loaded</a> </div>
       <div ng-show="picData" class="item item-image">When pics loaded click to upload!<img id="myImage" class="item" ng-src="{{picData}}" ng-click="uploadPicture()" style="height:200px;"/></div>
       <div class="home-sq" ng-show=photos><p><i class="icon ion-alert-circled" style="color:#F60"></i> Click to set photo like avatar, or lon click to delete!<p>
         <div ng-repeat="photo in photos track by $index" ng-click="setPhoto($index, photo.name, profilo.user_id)" on-hold="delPhoto($index, photo.name)" style="background-image:url({{photo.file}});background-size:120% auto"> </div>
       </div> -->
-      <a ui-sref="tabsController.confirmacao()" id="novoCliente-button7" class="button button-positive button-small button-block icon ion-checkmark-round botao-blue"> Salvar</a>
+      <a ui-sref="tabsController.confirmacao()" id="novoCliente-button7" class="button button-positive button-small button-block icon ion-checkmark-round botao-blue" ng-click="addCustomer(customer)"> Salvar</a>
       <a ui-sref="tabsController.meusClientes()" id="novoCliente-button8" class="button button-positive button-small button-block button-outline icon ion-close-round botao-blue-out"> Cancelar</a>
     </form>
 
-  </ion-content>
-</ion-view>
 
 <!-- Ok now he works, i just added a base64_decode:
 

@@ -140,15 +140,15 @@ angular.module('app.routes', ['ionicUIRouter'])
     views: {
       'tab3': {
         templateUrl: 'templates/detalheCliente.html',
-        controller: 'detalheClienteCtrl'
+        controller: 'novoClienteCtrl'
       },
       'tab1': {
         templateUrl: 'templates/detalheCliente.html',
-        controller: 'detalheClienteCtrl'
+        controller: 'novoClienteCtrl'
       },
       'tab2': {
         templateUrl: 'templates/detalheCliente.html',
-        controller: 'detalheClienteCtrl'
+        controller: 'novoClienteCtrl'
       }
     }
   })

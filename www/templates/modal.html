@@ -1,0 +1,35 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">Novo Endereço</h1>
+    <button class="button button-clear button-primary icon ion-close-round" ng-click="modal.hide()"></button>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">CEP</span>
+        <input ng-model="address.cep" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Endereço</span>
+        <input ng-model="address.title" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Complemento</span>
+        <input ng-model="address.complement" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Número</span>
+        <input ng-model="address.number" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Cidade</span>
+        <input ng-model="address.city" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Estado</span>
+        <input ng-model="address.state" type="text">
+      </label>
+      <button class="button button-full button-positive" ng-click="addAddress(address)">Incluir</button>
+    </div>
+  </ion-content>
+</ion-modal-view>

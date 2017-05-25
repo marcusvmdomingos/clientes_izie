@@ -2,6 +2,10 @@
 
 Aplicativo teste para entrar na Izie. Vamos nessa!
 
+## Comentários ##
+
+Gostei muito de fazer esse aplicativo, desde a parte da concepção visual até o frontend/backend final. Não consegui concluir o projeto por vários motivos, mas gostei do resultado. Não consegui integrar com a API (expliquei melhor no README da API), não consegui fazer uma funcionalidade aceitável para carregamento de fotos e esqueci de colocar meio de editar e excluir clientes e endereços (só me dei conta já na última versão, mas não dava mais tempo), mas acho que valei para a mostrar parte do meu trabalho.
+
 ## Meu Processo de Build ##
 
 Algumas coisas tiveram que ser diferentes do que é "ensinado" na documentação do Ionic. Como forcei o uso de uma versão do Ionic e do Cordova para ficar no Ionic 1, algumas coisinhas tiveram que ser feitas de maneira diferente, a começar por vários passos de instalação do ambiente.
@@ -43,3 +47,12 @@ Todas as telas do requisito, com os campos Nome, Data de Nascimento e Foto do Cl
 
 v1.2.1 (branch versao-2)
 Nessa versão foram acrescentados os campos de E-mail e CPF no cadastro do Cliente. Todas as informações dessa versão são estáticas, ainda não apresenta API.
+
+v1.3.1 (branch versao-3)
+
+## Agradecimento ##
+
+Desde já agradeço a oportunidade e a atenção.
+
+Abraço!
+Marcus Domingos

@@ -9844,6 +9844,12 @@ p {
   display: block;
   margin: 0 auto; }
 
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
 .espaco-top {
   margin-top: 120px; }
 
@@ -10096,6 +10102,12 @@ form#meusClientes-form2 {
   color: #596573;
   margin-bottom: 8px;
   padding: 3px 8px; }
+
+.enderecos {
+  width: 30px !important;
+  text-align: center;
+  height: 30px;
+  line-height: 15px; }
 
 /* TABS */
 .tabs .tab-item .icon.icon-list {
