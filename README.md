@@ -13,31 +13,31 @@ Algumas coisas tiveram que ser diferentes do que é "ensinado" na documentação
 Detalhe que estava trabalhando no linux, então só consegui compilar APK para Android.
 
 #0 Pré-build - Gerando chave de assinatura
-
+```
 $ keytool -genkey -v -keystore my-release-key.keystore -alias marcus_domingos -keyalg RSA -keysize 2048 -validity 10000
-
+```
 Fiz uma cópia do arquivo "my-release-key" e coloquei na pasta APK da build do android para facilitar o processo.
 
 #1 Build Debug APK
-
+```
 $ ionic build android
-
+```
 #2 Build Release APK
-
+```
 $ cordova build --release android
-
+```
 #3 Assinar a Build
 
 Dentro da pasta platforms/android/builds/output/apk:
-
+```
 $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore android-release-unsigned.apk Marcus_Domingos
-
+```
 #4 Compactar o APK
 
 Aqui tive que fazer alguns ajustes para executar o zipalign dentro do JDK e aplicar no arquivo android-release-unsigned.apk a compactação e gerando o arquivo ClientesIziev1.2.1.apk.
-
+```
 $ /path/Android/Sdk/build-tools/25.0.3/./zipalign -v 4 /path/clientes_izie/platforms/android/build/outputs/apk/android-release-unsigned.apk /path/clientes_izie/platforms/android/build/outputs/apk/ClientesIziev1.2.1.apk
-
+```
 ## Versões ##
 
 Tem uma branch para cada versão conforme pedido para o teste. Da mesma forma, criei uma pasta chamada "releases" na raiz do projeto, contendo o APK específico de cada versão, visto que não subi as pastas de "plataforms" no projeto para não ficar muito extenso.
@@ -48,7 +48,7 @@ Todas as telas do requisito, com os campos Nome, Data de Nascimento e Foto do Cl
 v1.2.1 (branch versao-2)
 Nessa versão foram acrescentados os campos de E-mail e CPF no cadastro do Cliente. Todas as informações dessa versão são estáticas, ainda não apresenta API.
 
-v1.3.1 (branch versao-3)
+v1.3.1 (branch versao-3/master)
 Incluído parte com endereços, abrindo numa modal, podendo se cadastrar vários no mesmo cliente. Fiz também toda a parte de captura e exibição dos dados do cliente para conversar com a Api, mas infelizmente não consegui chegar ao resultado final com a Api. Não sei ao certo o motivo, mas não consegui criar as tabelas no ambiente local pelo Homestead. E mesmo depois de eu ter criado as tabelas manualmente, não consegui fazer o seed de dados, dava erro de "Data missing" e não consegui resolver. Mesmo que a avaliação seja feita sobre o que foi entregue, gostaria de pedir para resolver esses problemas até Sexta (dia 26). Aí sim o aplicativo vai estar 100%.
 
 ## Agradecimento ##
