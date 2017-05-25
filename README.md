@@ -49,6 +49,7 @@ v1.2.1 (branch versao-2)
 Nessa versão foram acrescentados os campos de E-mail e CPF no cadastro do Cliente. Todas as informações dessa versão são estáticas, ainda não apresenta API.
 
 v1.3.1 (branch versao-3)
+Incluído parte com endereços, abrindo numa modal, podendo se cadastrar vários no mesmo cliente. Fiz também toda a parte de captura e exibição dos dados do cliente para conversar com a Api, mas infelizmente não consegui chegar ao resultado final com a Api. Não sei ao certo o motivo, mas não consegui criar as tabelas no ambiente local pelo Homestead. E mesmo depois de eu ter criado as tabelas manualmente, não consegui fazer o seed de dados, dava erro de "Data missing" e não consegui resolver. Mesmo que a avaliação seja feita sobre o que foi entregue, gostaria de pedir para resolver esses problemas até Sexta (dia 26). Aí sim o aplicativo vai estar 100%.
 
 ## Agradecimento ##
 
