@@ -15,11 +15,11 @@
       </div>
       <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input2">
         <span class="input-label">Nome</span>
-        <input type="text" placeholder="Nome do cliente" ng-model="customer.nome">
+        <input type="text" placeholder="Nome do cliente" ng-model="customer.name">
       </label>
       <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input3">
         <span class="input-label">Data de nascimento</span>
-        <input type="date" format="dd/MM/yyyy" placeholder="Data de nascimento" ng-model="customer.nasc">
+        <input type="date" format="dd/MM/yyyy" placeholder="Data de nascimento" ng-model="customer.birth">
       </label>
       <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input6" >
         <span class="input-label">CPF</span>
@@ -27,11 +27,11 @@
       </label>
       <label class="item item-input item-stacked-label campo-blue" id="novoCliente-input4">
         <span class="input-label">Foto</span>
-        <input type="file" ng-model="customer.foto">
+        <input type="file" ng-model="customer.pic">
       </label>
       <div class="item item-input item-stacked-label campo-blue" id="novoCliente-input5">
         <span class="input-label">Endereço(s)</span>
-        <a ng-click="modal.show()" id="novoCliente-button7" class="button button-positive button-small button-block icon ion-plus-round botao-blue right enderecos"></a>
+        <a ng-click="modal.show(), addCustomer(customer)" id="novoCliente-button7" class="button button-positive button-small button-block icon ion-plus-round botao-blue right enderecos"></a>
 
         <p ng-if="addresses.leight==0" class="block center">Nenhum endereço cadastrado.</p>
 

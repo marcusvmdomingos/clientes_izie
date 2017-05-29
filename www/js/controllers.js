@@ -5,6 +5,10 @@ angular.module('app.controllers', [])
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
 
+  $scope.doRefresh = function(){
+      $scope.init();
+      $scope.$broadcast('scroll.refreshComplete');
+    }
 
 }])
    
@@ -19,33 +23,43 @@ function ($scope, $http, $ionicModal,) {
 	$scope.error;
 	$scope.customer;
  
-	$scope.init = function() {
+  $scope.lastpage=1;
+  $scope.init = function() {
+    $scope.lastpage=1;
         $http({
-            url: 'http://192.168.10.11/api/api/customers',
+            url: 'http://clientesIzieAPI.app/api/api/customers',
             method: "GET",
+            params: {page: $scope.lastpage}
         }).success(function(customers, status, headers, config) {
             $scope.customers = customers.data;
+            $scope.currentpage = customers.current_page;
         });
     };
-
-    $scope.addCustomer = function(customer) {
+  $scope.noMoreItemsAvailable = false;
+  $scope.loadMore = function(limit) {
+    console.log("Load More Called");
+                if(!limit){
+                  limit = 5;
+                }
  
-      console.log("add customer: ",customer);
+                $scope.lastpage +=1;
+                $http({
+                    url: 'http://clientesIzieAPI.app/api/api/customers',
+                    method: "GET",
+                    params: {limit: limit, page:  $scope.lastpage}
+                }).success(function (customers, status, headers, config) {
+                    console.log(customers);
  
-        $http.post('http://192.168.10.11/api/api/customers', {
-            body: customer,
-        }).success(function(response) {
-            $scope.customers.unshift(response.data);
-            console.log($scope.customers);
-            $scope.customer = '';
-            console.log("Customer Created Successfully");
-        }).error(function(){
-          console.log("error");
-        });
-
-    };
+                    if (customers.next_page_url == null){
+                         $scope.noMoreItemsAvailable = true;
+                     }
  
-    $scope.init();
+                    $scope.customers = $scope.customers.concat(customers.data);
+ 
+ 
+                });
+                $scope.$broadcast('scroll.infiniteScrollComplete');
+            };
 
   $scope.addresses = [];
 
@@ -54,7 +68,7 @@ function ($scope, $http, $ionicModal,) {
  
       console.log("add address: ",address);
  
-        $http.post('http://192.168.10.11/api/api/addresses', {
+        $http.post('http://clientesIzieAPI.app/api/api/addresses', {
             body: address,
         }).success(function(response) {
             $scope.addresses.unshift(response.data);
@@ -83,6 +97,7 @@ function ($scope, $http, $ionicModal,) {
     address.number = ""
     address.city = "";
     address.state = "";
+    address.client_id = "";
   };
 
   
